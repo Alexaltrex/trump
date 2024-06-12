@@ -1,0 +1,63 @@
+@import "../../assets/styles/app";
+
+.footer {
+  background: linear-gradient(77deg, #b7162f 0%, #fd3d5b 49.94%, #b7162f 100%);
+  padding: vwM(12) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    flex-direction: row;
+    padding: vwD(56) 0;
+  }
+
+  .logo {
+    display: block;
+    width: vwM(220);
+    height: auto;
+
+    @include desktop {
+      width: vwD(544);
+    }
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: vwM(8);
+
+    @include desktop {
+      margin-top: 0;
+      flex-grow: 1;
+    }
+
+    p {
+      @include DigitalStrip2BB_Reg;
+      font-size: vwM(18);
+      color: #fff;
+      text-align: center;
+
+      @include desktop {
+        font-size: vwD(45);
+        //text-align: left;
+      }
+
+      &:nth-child(1) {
+        word-break: break-all;
+        background: #353290;
+        padding: vwM(4) vwM(6);
+
+        span {
+          color: #f00;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-top: vwM(8);
+      }
+    }
+  }
+
+}

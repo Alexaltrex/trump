@@ -1,0 +1,85 @@
+@import "../../assets/styles/app";
+
+.first {
+  position: relative;
+  height: vwM(268);
+  background-image: url(../../assets/png/first/back.png);
+  background-size: cover;
+  overflow: hidden;
+
+  @include desktop {
+    height: vwD(1077);
+  }
+
+  .trumpWrapper {
+    position: absolute;
+    overflow: hidden;
+    left: vwM(-22);
+    bottom: 0;
+    width: vwM(236);
+    height: vwM(205);
+
+    @include desktop {
+      width: vwD(1006);
+      height: vwD(890);
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .title {
+    position: absolute;
+    z-index: 11;
+    width: vwM(265);
+    height: auto;
+    top: vwM(49);
+    right: 0;
+
+    @include desktop {
+      width: vwD(1250);
+      top: vwD(114);
+      right: vwD(-75);
+    }
+  }
+
+  .text {
+    @include centerRow;
+    position: absolute;
+    top: vwM(196);
+    right: vwM(4);
+    border-radius: vwM(19);
+    width: vwM(279);
+    height: vwM(62);
+    backdrop-filter: blur(25.399999618530273px);
+    background: rgba(55, 53, 140, 0.88);
+
+    @include desktop {
+      width: vwD(1132);
+      height: vwD(197);
+      border-radius: vwD(19);
+      top: vwD(840);
+      right: vwD(24);
+    }
+
+    p {
+      @include DigitalStrip2BB_Bold;
+      @include border_blue_3;
+      font-weight: 700;
+      font-size: vwM(14);
+      line-height: 154%;
+      text-align: center;
+      color: #fff;
+
+      @include desktop {
+        @include border_blue_9;
+        font-size: vwD(45);
+      }
+    }
+  }
+}

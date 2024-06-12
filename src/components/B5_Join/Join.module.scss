@@ -1,0 +1,99 @@
+@import "../../assets/styles/app";
+
+.join {
+  position: relative;
+  height: vwM(360);
+  background-image: url(../../assets/png/join/back.png);
+  background-size: cover;
+  overflow: hidden;
+
+  @include desktop {
+    height: vwD(1200);
+  }
+
+  .title {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: vwM(374);
+    height: auto;
+
+    @include desktop {
+      width: vwD(1288);
+      left: auto;
+      transform: none;
+      right: vwD(35);
+    }
+  }
+
+  .house {
+    display: block;
+    position: absolute;
+    width: vwM(612);
+    height: auto;
+    bottom: vwM(-15);
+    left: vwM(-68);
+
+    @include desktop {
+      width: vwD(2298);
+      left: 0;
+      bottom: vwD(-80);
+    }
+  }
+
+  .trump {
+    position: absolute;
+    width: vwM(216);
+    height: auto;
+    left: vwM(-10);
+    bottom: vwM(-40);
+
+    @include desktop {
+      width: vwD(950);
+    }
+  }
+
+  .socialLinks {
+
+    a {
+      position: absolute;
+      width: vwM(99);
+      height: vwM(32);
+
+
+      @include desktop {
+        width: vwD(283);
+        height: vwD(94);
+      }
+
+      &:nth-child(1) {
+        background-image: url(../../assets/png/header/btn1_m.png);
+        background-size: 100% 100%;
+        top: vwM(192);
+        right: vwM(182);
+
+        @include desktop {
+          background-image: url(../../assets/png/header/btn1_d.png);
+          top: vwD(608);
+          right: vwD(785);
+        }
+      }
+
+      &:nth-child(2) {
+        background-image: url(../../assets/png/header/btn2_m.png);
+        background-size: 100% 100%;
+        top: vwM(192);
+        right: vwM(5);
+
+        @include desktop {
+          background-image: url(../../assets/png/header/btn2_d.png);
+          top: vwD(608);
+          right: vwD(96);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,141 @@
+@import "../../assets/styles/app";
+
+.map {
+  position: relative;
+  height: vwM(680);
+  background-image: url(../../assets/png/map/back.png);
+  background-size: cover;
+  overflow: hidden;
+
+  @include desktop {
+    height: vwD(1480);
+  }
+
+  .top {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 100%;
+  }
+
+  .title {
+    position: absolute;
+    width: vwM(346);
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: vwM(50);
+
+    @include desktop {
+      width: vwD(1198);
+      top: vwD(75);
+    }
+  }
+
+  .trump_back {
+    position: absolute;
+    display: block;
+    width: vwM(360);
+    bottom: 0;
+    left: vwM(-38);
+
+    @include desktop {
+      width: vwD(1013);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .trump {
+    position: absolute;
+    display: block;
+    width: vwM(312);
+    height: auto;
+    top: vwM(290);
+    left: vwM(-4);
+
+    @include desktop {
+      width: vwD(900);
+      left: vwD(980);
+      transform: translateX(-50%);
+      top: vwD(380);
+    }
+  }
+
+
+
+
+  .text_0_d {
+    @include onlyDesktop();
+    width: vwD(679);
+    height: auto;
+    position: absolute;
+    top: vwD(356);
+    left: vwD(-45);
+  }
+
+  .text_1_d {
+    @include onlyDesktop();
+    width: vwD(844);
+    height: auto;
+    position: absolute;
+    top: vwD(206);
+    right: vwD(-97);
+  }
+
+  .text_2_d {
+    @include onlyDesktop();
+    width: vwD(859);
+    height: auto;
+    position: absolute;
+    top: vwD(718);
+    left: vwD(-114);
+  }
+
+  .text_3_d {
+    @include onlyDesktop();
+    width: vwD(844);
+    height: auto;
+    position: absolute;
+    top: vwD(731);
+    right: vwD(-97);
+  }
+
+  .text_0_m {
+    @include onlyMobile();
+    width: vwM(259);
+    height: auto;
+    position: absolute;
+    top: vwM(142);
+    left: vwM(-11);
+  }
+
+  .text_1_m {
+    @include onlyMobile();
+    width: vwM(278);
+    height: auto;
+    position: absolute;
+    top: vwM(88);
+    right: vwM(-35);
+  }
+
+  .text_2_m {
+    @include onlyMobile();
+    width: vwM(278);
+    height: auto;
+    position: absolute;
+    top: vwM(230);
+    right: vwM(-36);
+  }
+
+  .text_3_m {
+    @include onlyMobile();
+    width: vwM(320);
+    height: auto;
+    position: absolute;
+    top: vwM(425);
+    right: vwM(-60);
+  }
+
+
+}

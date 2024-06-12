@@ -1,0 +1,43 @@
+@import "../../../assets/styles/app";
+
+.runningString {
+  height: vwM(48);
+  background: #37358C;
+
+  @include desktop {
+    height: vwD(131);
+  }
+}
+
+.item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .star {
+    width: vwM(44);
+    height: auto;
+
+    @include desktop {
+      width: vwD(109);
+    }
+  }
+
+  .text {
+    @include Bangers;
+    @include border_black_7;
+    white-space: nowrap;
+    font-size: vwM(35);
+    color: #FFF;
+    margin: 0 vwM(8);
+
+    &_red {
+      color: #f00;
+    }
+
+    @include desktop {
+      @include border_black_11;
+      font-size: vwD(101);
+    }
+  }
+}

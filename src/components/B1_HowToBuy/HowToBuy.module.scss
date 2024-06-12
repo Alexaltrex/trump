@@ -1,0 +1,124 @@
+@import "../../assets/styles/app";
+
+.howToBuy {
+  position: relative;
+  height: calc((1241/1777) * 100vw);
+  background-color: #000;
+  //background-image: url(../../assets/gif/howToBuy.gif);
+  background-size: cover;
+
+  .figure {
+    position: absolute;
+    width: vwD(364);
+    height: vwD(427);
+    top: vwD(550);
+    left: vwD(290);
+  }
+
+
+  .back {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+  .title {
+    position: absolute;
+    display: block;
+    width: vwM(102);
+    height: auto;
+    left: vwM(135);
+    top: vwM(40);
+  }
+
+  .logo {
+    position: absolute;
+    display: block;
+    width: vwD(500);
+    height: auto;
+    left: vwD(800);
+    top: vwD(225);
+  }
+
+  .trump {
+    position: absolute;
+    width: auto;
+    height: vwD(800);
+    top: vwD(435);
+    right: vwD(685);
+  }
+
+  .wrapper {
+    position: absolute;
+    padding: vwM(16);
+    top: vwM(87);
+    right: vwM(4);
+    border-radius: vwM(33);
+    width: vwM(180);
+    //height: vwM(144);
+    backdrop-filter: blur(32px);
+    background: rgba(53, 50, 144, 0.62);
+
+    @include desktop {
+      border-radius: vwD(33);
+      width: vwD(702);
+      //height: vwD(746);
+      top: vwD(344);
+      right: vwD(60);
+    }
+
+    .texts {
+
+      p {
+        @include DigitalStrip2BB_Bold;
+        font-weight: 700;
+        font-size: vwM(8);
+        line-height: 128%;
+        text-transform: lowercase;
+        text-align: center;
+        color: #fff;
+
+        @include desktop {
+          font-size: vwD(28);
+        }
+
+        &:not(:first-child) {
+          margin-top: vwM(12);
+
+          @include desktop {
+            margin-top: vwD(42);
+          }
+        }
+      }
+    }
+
+    button {
+      @include button;
+      width: 100%;
+      margin-top: vwM(8);
+
+      @include desktop {
+        //width: vwD(518);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+
+  }
+
+  .bottom {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}

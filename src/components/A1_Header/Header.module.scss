@@ -1,0 +1,94 @@
+@import "../../assets/styles/app";
+
+.header {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  height: vwM(118);
+
+  @include desktop {
+    height: vwD(335);
+  }
+
+  .back_m {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  .back_d {
+    @include onlyDesktop();
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  .logo {
+    position: absolute;
+    z-index: 2;
+    width: vwM(177);
+    height: auto;
+    left: vwM(-3);
+    top: vwM(6);
+
+    @include desktop {
+      width: vwM(150);
+      top: vwM(-6);
+    }
+  }
+
+  .socialLinks {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: vwM(7);
+    padding-right: vwM(14);
+
+    @include desktop {
+
+    }
+
+    a {
+      width: vwM(99);
+      height: vwM(32);
+
+
+      @include desktop {
+        width: vwD(283);
+        height: vwD(94);
+      }
+
+      &:nth-child(1) {
+        background-image: url(../../assets/png/header/btn1_m.png);
+        background-size: 100% 100%;
+
+        @include desktop {
+          background-image: url(../../assets/png/header/btn1_d.png);
+        }
+      }
+
+      &:nth-child(2) {
+        background-image: url(../../assets/png/header/btn2_m.png);
+        background-size: 100% 100%;
+        margin-left: vwM(14);
+
+
+        @include desktop {
+          background-image: url(../../assets/png/header/btn2_d.png);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,66 @@
+@import "../../assets/styles/app";
+
+.whyTrump {
+  position: relative;
+  height: calc(100vw * 1043 / 1586);
+  background-image: url(../../assets/png/why/back.png);
+  background-size: cover;
+  overflow: hidden;
+
+  .wrapper {
+    position: absolute;
+    bottom: vwM(30);
+    left: 0;
+    border-radius: vwM(19);
+    width: vwM(325);
+    padding: vwM(8);
+    //height: vwM(148);
+    backdrop-filter: blur(25.399999618530273px);
+    background: rgba(55, 53, 140, 0.66);
+
+    @include desktop {
+      border-radius: vwD(19);
+      width: vwD(1132);
+      //height: vwD(557);
+      left: vwD(90);
+      bottom: vwD(200);
+    }
+
+    p {
+      @include DigitalStrip2BB_Bold;
+      font-weight: 700;
+      font-size: vwM(8);
+      line-height: 112%;
+      text-transform: lowercase;
+      text-align: center;
+      color: #fff;
+
+      @include desktop {
+        font-size: vwD(35);
+      }
+
+      &:not(:first-child) {
+        margin-top: vwM(10);
+
+        @include desktop {
+          margin-top: vwD(40);
+        }
+      }
+    }
+
+  }
+
+  .trump {
+    position: absolute;
+    width: auto;
+    height: vwM(181);
+    right: vwM(-70);
+    bottom: 0;
+
+    @include desktop {
+      height: vwD(870);
+      right: vwD(-140);
+    }
+  }
+
+}
